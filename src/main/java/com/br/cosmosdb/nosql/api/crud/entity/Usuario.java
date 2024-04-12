@@ -29,11 +29,10 @@ public class Usuario {
 	private List<Endereco> enderecos;
 
 	public String getPartitionKey() {
-		//if (partitionKey == null) {
-		//	this.partitionKey = UUID.randomUUID().toString();
-		// }
-		//return partitionKey;
-		return "usuario";
+		if (partitionKey == null) {
+			this.partitionKey = UUID.randomUUID().toString();
+		}
+		return partitionKey;
 	}
 	
 }
